@@ -7,16 +7,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\build\EkstaziSharp.Core\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <None Include="..\Tester\Tester.licenseheader">
-      <Link>Tester.licenseheader</Link>
-    </None>
     <Fakes Include="Fakes\DependencyMonitor.fakes" />
   </ItemGroup>
   <ItemGroup>

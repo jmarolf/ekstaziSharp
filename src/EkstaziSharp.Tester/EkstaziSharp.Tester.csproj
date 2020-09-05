@@ -5,33 +5,11 @@
     <AssemblyName>ekstaziSharpTester</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\build\EkstaziSharp.Tester\</OutputPath>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.core">
-      <HintPath>..\packages\NUnit.Extension.NUnitV2Driver.3.5.0\tools\nunit.core.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.core.interfaces">
-      <HintPath>..\packages\NUnit.Extension.NUnitV2Driver.3.5.0\tools\nunit.core.interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.v2.driver">
-      <HintPath>..\packages\NUnit.Extension.NUnitV2Driver.3.5.0\tools\nunit.v2.driver.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Build" />
     <Reference Include="Microsoft.Build.Framework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="nuget.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Evaluation\Abot.txt" />
     <Content Include="Resources\Evaluation\AbotUnit.txt" />
     <Content Include="Resources\Evaluation\AbotUnitNoInstrumentation.txt" />
@@ -67,14 +45,16 @@
     <Content Include="Resources\GithubProjects\EnyimMemcached.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Update="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Compile Update="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EkstaziSharp.Core\EkstaziSharp.Core.csproj" />
